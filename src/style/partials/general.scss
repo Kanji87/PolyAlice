@@ -1,0 +1,28 @@
+/*---
+general.scss
+---*/
+
+/* Variables */
+$page-width: 1280px;
+$icon-grey: #b2b2b2;
+$black: #333;
+$blue: #06f;
+$white: #fff;
+
+// Font sizes
+$fz-footer: 12px;
+$fz-menu: 18px;
+$fz-heading: 20px;
+
+// Image paths
+$imgPath: "../img";
+$iconPath: "../img/icons";
+
+/* Mixins */
+
+
+/* Styles */
+body {
+  font-family: PolytechSans, helvetica, sans-serif;
+  color: $black;
+}

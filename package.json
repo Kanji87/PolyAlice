@@ -10,7 +10,7 @@
     "gulp-connect": "*",
     "gulp-cssmin": "*",
     "gulp-imagemin": "*",
-    "gulp-rigger": "*",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",

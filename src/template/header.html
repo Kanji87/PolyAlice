@@ -1,29 +1,66 @@
-<header class="page-header">
-    <div class="center-block page-header__inner">
-        <div class="menu-trigger"></div>
-        <div class="page-header__social">
-            <a class="page-header__social-item icon-fb pull-left" href="#"></a>
-            <a class="page-header__social-item icon-vk pull-left" href="#"></a>
-        </div>
-        <a class="page-header__logo" href="index.html"></a>
-        <div class="page-header__search pull-right">
-            <div class="page-header__search-robot"></div>
-            <form class="page-header__search-form" action="">
-                <input class="page-header__search-input" name="search" type="text" placeholder="">
-                <i class="page-header__search-icon page-header__search-icon--unfocused"></i>
-                <i class="page-header__search-icon page-header__search-icon--focused"></i>
-                <!--<input class="page-header__search-submit" value="" type="submit">-->
-            </form>
-            <script type="text/javascript">
-                $(function(){
-                    $('.page-header__search-input').focusin(function(){
-                        $('.page-header__search').addClass('focused');
-                    });
-                    $('.page-header__search-input').focusout(function(){
-                        $('.page-header__search').removeClass('focused');
-                    });
-                });
-            </script>
-        </div>
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+
+<!--[if IE 9 ]><html class="ie ie9" lang="en">
+<![endif]-->
+
+<!--[if (gte IE 10)|!(IE)]&gt;
+<!-->
+<html lang="en">
+
+<!--<![endif]-->
+<head>
+    <title>Skyline</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/build/css/main.css">
+    <script src="/build/js/main.js"></script>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+    <div class="sk-spinner sk-spinner-wave">
+        <div class="sk-rect1"></div>
+        <div class="sk-rect2"></div>
+        <div class="sk-rect3"></div>
+        <div class="sk-rect4"></div>
+        <div class="sk-rect5"></div>
+    </div>
+</div>
+<!-- End .preloader -->
+
+<header class="header  ">
+    <div class="container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo" width="120">
+            <img class="logo-light" src="img/logo-light.png" alt="logo" width="120"> </a>
+        <!-- End .logo -->
+
+        <a href="#" class="open-btn">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <ul class="main_menu">
+                <li> <a href="about1.html">About</a>  </li>
+                <li> <a href="team1.html">Team</a>  </li>
+                <li> <a href="services1.html">Services</a>  </li>
+                <li> <a href="blog.html">Blog</a>  </li>
+                <li> <a href="portfolio.html">Portfolio</a>  </li>
+                <li> <a href="contact1.html">Contact</a>  </li>
+            </ul>
+        </nav>
+        <!-- End Navigation -->
+
     </div>
 </header>
+<!-- End header -->

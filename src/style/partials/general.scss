@@ -8,6 +8,10 @@ $icon-grey: #b2b2b2;
 $black: #333;
 $blue: #06f;
 $white: #fff;
+$phone: 320px;
+$fablet: 480px;
+$tablet: 768px;
+$desktop: 1024px;
 
 // Font sizes
 $fz-footer: 12px;
@@ -19,7 +23,20 @@ $imgPath: "../img";
 $iconPath: "../img/icons";
 
 /* Mixins */
-
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media only screen and (min-width: $phone) and (max-width: $fablet - 1) { @content; }
+  }
+  @else if $media == fablet {
+    @media only screen and (min-width: $fablet) and (max-width: $tablet - 1) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $tablet) and (max-width: $desktop - 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktop) { @content; }
+  }
+}
 
 /* Styles */
 body {

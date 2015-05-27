@@ -2,11 +2,13 @@
 *   Third party
 */
 
-//= ../../bower_components/jquery/dist/jquery.js
-//= ../../bower_components/bootstrap/dist/js/bootstrap.js
+//= partials/vendor/jquery.min.js
+//= partials/vendor/modernizr.min.js
 
 /*
 *   Custom
 */
 
+//= partials/assets.js
+//= partials/plugins.js
 //= partials/app.js

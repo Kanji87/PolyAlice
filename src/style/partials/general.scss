@@ -2,25 +2,28 @@
 general.scss
 ---*/
 
-/* Variables */
-$page-width: 1280px;
-$icon-grey: #b2b2b2;
-$black: #333;
-$blue: #06f;
-$white: #fff;
+// Variables
 $phone: 320px;
 $fablet: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 
-// Font sizes
+// Colors
+$black: #333;
+$white: #fff;
+$yellow: #fdc244;
+$orange: #f69322;
+$green: #b9d777;
+$red: #ef4e34;
+
+// Fonts
 $fz-footer: 12px;
 $fz-menu: 18px;
 $fz-heading: 20px;
 
 // Image paths
-$imgPath: "../img";
-$iconPath: "../img/icons";
+$imgPath: "../img/alice/";
+$iconPath: "../img/alice/icons/";
 
 /* Mixins */
 @mixin respond-to($media) {
@@ -39,7 +42,19 @@ $iconPath: "../img/icons";
 }
 
 /* Styles */
+html {
+  font-size: 16px;
+}
 body {
   font-family: PolytechSans, helvetica, sans-serif;
   color: $black;
+  letter-spacing: normal;
+}
+
+.container {
+  width: 1000px;
+}
+
+.alice-font {
+  font-family: 'Oranienbaum', serif;
 }

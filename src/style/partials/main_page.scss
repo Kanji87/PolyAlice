@@ -1,0 +1,77 @@
+/*
+* main_page.scss
+*/
+
+.promo-slide {
+  background-color: $black;
+  padding-top: 80px;
+}
+
+.promo-slide__img img {
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+
+.promo-slide__info {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.promo-slide__location {
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  i {
+    color: $yellow;
+    font-size: .9em;
+  }
+  p {
+    text-transform: uppercase;
+    color: $yellow;
+    font-size: 1.7em;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+.promo-slide__action-button {
+  text-align: center;
+
+  a {
+    width: 90%;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 40px;
+    text-decoration: none;
+    color: $black;
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 0 0;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+  }
+}
+
+.promo-slide__visit a {
+    background-image: url($imgPath + 'hexagon_yellow_btn.png');
+  &:hover {
+    color: $yellow;
+    background-image: url($imgPath + 'hexagon_yellow_btn_hover.png');
+  }
+}
+
+.promo-slide__buy a {
+  background-image: url($imgPath + 'hexagon_green_btn.png');
+  &:hover {
+    color: $green;
+    background-image: url($imgPath + 'hexagon_green_btn_hover.png');
+  }
+}

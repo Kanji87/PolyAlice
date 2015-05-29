@@ -12,7 +12,9 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     connect = require('gulp-connect'),
-    opn = require('opn');
+    opn = require('opn'),
+    plumber = require('gulp-plumber'),
+    gutil = require('gulp-util');
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -63,6 +65,12 @@ gulp.task('js:build', function(){
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
@@ -128,6 +136,29 @@ gulp.task('watch', function(){
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+});
+
+gulp.task('server-watch', function(){
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:build');
+    });
+    watch([path.watch.style], function(event, cb) {
+        gulp.start('style:build');
+    });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('js:build');
+    });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('image:build');
+    });
+    watch([path.watch.fonts], function(event, cb) {
+        gulp.start('fonts:build');
+    });
+    connect.server({
+        host: server.host,
+        port: server.port,
+        livereload: true
     });
 });
 

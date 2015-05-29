@@ -1,22 +1,168 @@
 <!DOCTYPE html>
-<html lang="ru">
+
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+
+<!--[if IE 9 ]><html class="ie ie9" lang="en">
+<![endif]-->
+
+<!--[if (gte IE 10)|!(IE)]&gt;
+<!-->
+<html lang="en">
+
+<!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script type="text/javascript" src="/js/main.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <title>Skyline</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Oranienbaum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/build/css/main.css">
+    <script src="/build/js/main.js"></script>
 </head>
 <body>
-    <!-- //= template/header.html -->
 
-    <section class="main center-block">
-        <!-- //= template/slide_menu.html -->
-        <div class="content">
-            <!-- //= template/home_grid.html -->
+<!-- Preloader -->
+<div class="preloader">
+    <div class="sk-spinner sk-spinner-wave">
+        <div class="sk-rect1"></div>
+        <div class="sk-rect2"></div>
+        <div class="sk-rect3"></div>
+        <div class="sk-rect4"></div>
+        <div class="sk-rect5"></div>
+    </div>
+</div>
+<!-- End .preloader -->
+
+<header class="header">
+    <div class="container">
+        <!-- Logo -->
+        <a href="https://polymus.ru" target="_blank" class="logo">
+            <img class="logo-polymus" src="/build/img/alice/logo_polymus.png" alt="Polymus">
+        </a>
+        <!-- End .logo -->
+        <a href="#" class="open-btn">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- Navigation -->
+        <nav>
+            <ul class="main_menu">
+                <li><a href="#">Посетить выставку</a></li>
+                <li>
+                    <a href="#">Темы</a>
+                    <ul>
+                        <li><a href="#">Пространство</a></li>
+                        <li><a href="#">Жизнь</a></li>
+                        <li><a href="#">Математика</a></li>
+                        <li><a href="#">Время</a></li>
+                        <li><a href="#">Восприятие</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Тест</a></li>
+                <li><a href="#">Игры</a></li>
+                <li><a href="#">Конкурс</a></li>
+            </ul>
+        </nav>
+        <!-- End Navigation -->
+    </div>
+</header>
+<!-- End header -->
+
+<!-- Slider Begin -->
+<div class="slider-wrapper promo-slide">
+    <div class="promo-slide__img">
+        <img src="/build/img/alice/main_slide.png" alt="" />
+    </div>
+    <div class="promo-slide__info">
+        <div class="promo-slide__location clearfix">
+            <p class="alice-font col-md-6"><i class="polyicon-location-marker"></i> вднх, павильон №64</p>
+            <p class="alice-font col-md-6">05 июня &mdash; 04 октября</p>
         </div>
-    </section>
+        <div class="promo-slide__action clearfix">
+            <div class="promo-slide__action-button promo-slide__visit col-md-6">
+                <a href="#">посетить выставку</a>
+            </div>
+            <div class="promo-slide__action-button promo-slide__buy col-md-6">
+                <a href="#">купить билет</a>
+            </div>
+        </div>
+        <div class="promo-slide__share"></div>
+    </div>
+</div><!-- End .slider-wrapper -->
 
-    <!-- //= template/footer.html -->
+<div class="sect tint-dark white-text" data-background=" img/bgs/bg1.jpg">
+    <div class="container">
+        <div class="testimonials mb-20-sm">
+            <ul class="testimonial bxslider">
+                <li>
+                    <i class="fa fa-quote-left"></i>
+                    <h1>Every child is an artist, the problem is staying an artist when you grow up </h1>
+                    <div class="name">Pablo Picasso</div>
+                </li>
+                <li>
+                    <i class="fa fa-quote-left"></i>
+                    <h1>Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep </h1>
+                    <div class="name">James Russell Lowell</div>
+                </li>
+                <li>
+                    <i class="fa fa-quote-left"></i>
+                    <h1>Creativity Requires the courage to let go of certainties </h1>
+                    <div class="name">Erich Fromm</div>
+                </li>
+            </ul><!-- / .slides -->
+        </div><!-- / .testimonials -->
+    </div><!-- / .container -->
+</div><!-- End .sect -->
+
+
+<!-- Footer -->
+<footer id="footer" class="footer pat-4">
+    <a href="#about" class="top-btn">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <div class="container">
+        <div class="cols-centered">
+            <div class="col-sm-3 animated mb-20-sm" data-animate="fadeInDown">
+                <i class="fa fa-phone"></i>
+                <div>07292 324 435</div>
+            </div>
+            <div class="col-sm-3 animated mb-20-sm" data-animate="fadeInDown">
+                <i class="fa fa-location-arrow"></i>
+                <div> Stark Industries,
+                    <br/> London PO 3452 </div>
+            </div>
+            <div class="col-sm-3 animated " data-animate="fadeInDown">
+                <i class="fa fa-envelope-o"></i>
+                <div>example@example.com</div>
+            </div>
+        </div>
+
+        <div class="clearfix mb-60"></div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href='#' class="animated" data-animate="fadeInUp">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href='#' class="animated" data-animate="fadeInUp">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href='#' class="animated" data-animate="fadeInUp">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </div>
+        <!-- End .social-icons -->
+
+        <div class="copy">&copy; 2015 SKYLINE</div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+
+<!-- JS and analytics only. -->
+<script src="js/skyline.js"></script>
 </body>
 </html>

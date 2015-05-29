@@ -1,22 +1,49 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script type="text/javascript" src="/js/main.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <!-- //= template/header.html -->
+//= template/header.html
 
-    <section class="main center-block">
-        <!-- //= template/slide_menu.html -->
-        <div class="content">
-            <!-- //= template/home_grid.html -->
+<!-- Slider Begin -->
+<div class="slider-wrapper promo-slide">
+    <div class="promo-slide__img">
+        <img src="/build/img/alice/main_slide.png" alt="" />
+    </div>
+    <div class="promo-slide__info">
+        <div class="promo-slide__location clearfix">
+            <p class="alice-font col-md-6"><i class="polyicon-location-marker"></i> вднх, павильон №64</p>
+            <p class="alice-font col-md-6">05 июня &mdash; 04 октября</p>
         </div>
-    </section>
+        <div class="promo-slide__action clearfix">
+            <div class="promo-slide__action-button promo-slide__visit col-md-6">
+                <a href="#">посетить выставку</a>
+            </div>
+            <div class="promo-slide__action-button promo-slide__buy col-md-6">
+                <a href="#">купить билет</a>
+            </div>
+        </div>
+        <div class="promo-slide__share"></div>
+    </div>
+</div><!-- End .slider-wrapper -->
 
-    <!-- //= template/footer.html -->
-</body>
-</html>
+<div class="sect tint-dark white-text" data-background=" img/bgs/bg1.jpg">
+    <div class="container">
+        <div class="testimonials mb-20-sm">
+            <ul class="testimonial bxslider">
+                <li>
+                    <i class="fa fa-quote-left"></i>
+                    <h1>Every child is an artist, the problem is staying an artist when you grow up </h1>
+                    <div class="name">Pablo Picasso</div>
+                </li>
+                <li>
+                    <i class="fa fa-quote-left"></i>
+                    <h1>Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep </h1>
+                    <div class="name">James Russell Lowell</div>
+                </li>
+                <li>
+                    <i class="fa fa-quote-left"></i>
+                    <h1>Creativity Requires the courage to let go of certainties </h1>
+                    <div class="name">Erich Fromm</div>
+                </li>
+            </ul><!-- / .slides -->
+        </div><!-- / .testimonials -->
+    </div><!-- / .container -->
+</div><!-- End .sect -->
+
+//= template/footer.html

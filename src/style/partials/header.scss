@@ -1,3 +1,61 @@
 /*---
 header.scss
 ---*/
+
+.header {
+  background-color: $black;
+
+  &.hd-short,
+  &.solid {
+    background-color: $black;
+
+    .main_menu {
+      color: $white;
+    }
+  }
+
+  .main_menu ul {
+    background-color: $orange;
+    color: $white;
+    padding: 20px 0;
+
+    li {
+      padding: 0 12px;
+      
+      a {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .main_menu,
+  .main_menu>li {
+    font-size: 1em;
+  }
+
+  .main_menu>li {
+    padding: 0 15px;
+  }
+
+  .logo,
+  .main_menu>li>a,
+  .main_menu>li>span,
+  .menu-fixer {
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .main_menu>li>a,
+  .main_menu>li>span {
+    text-transform: none;
+  }
+
+  .logo img {
+    display: initial;
+    width: 150px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+}

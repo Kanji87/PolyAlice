@@ -4,6 +4,7 @@
 
 //= partials/vendor/jquery.min.js
 //= partials/vendor/modernizr.min.js
+//= partials/social-likes.min.js
 
 /*
 *   Custom

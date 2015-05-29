@@ -1,8 +1,9 @@
 //= template/header.html
 
 <!-- Slider Begin -->
-<div class="slider-wrapper promo-slide">
+<section class="slider-wrapper promo-slide">
     <div class="promo-slide__img">
+        <h1 class="promo-slide__title">Интерактивная выставка Алиса в стране наук</h1>
         <img src="/build/img/alice/main_slide.png" alt="" />
     </div>
     <div class="promo-slide__info">
@@ -18,11 +19,23 @@
                 <a href="#">купить билет</a>
             </div>
         </div>
-        <div class="promo-slide__share"></div>
+        <div class="promo-slide__share">
+            <div class="social-likes">
+                <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
+                <div class="twitter" data-via="Polytechnicum" data-related="Polytechnicum" title="Поделиться ссылкой в Твиттере"></div>
+                <div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
+                <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках"></div>
+            </div>
+        </div>
     </div>
-</div><!-- End .slider-wrapper -->
+</section><!-- End .slider-wrapper -->
 
-<div class="sect tint-dark white-text" data-background=" img/bgs/bg1.jpg">
+<section class="about">
+    <h3 class="alice-font about-title">о выставке</h3>
+    <p class="about-text">Добро пожаловать в Страну наук! Здесь тебя ждут самые разные чудеса: пирожки с темной энергией, колыбельная для звезд, интерактивная эволюция, гости из четвертого измерения, путешествия сквозь пространство - время, отдых в чудесном саду и, конечно, игра в королевский крокет!</p>
+</section>
+
+<section class="sect tint-dark white-text" data-background=" img/bgs/bg1.jpg">
     <div class="container">
         <div class="testimonials mb-20-sm">
             <ul class="testimonial bxslider">
@@ -44,6 +57,6 @@
             </ul><!-- / .slides -->
         </div><!-- / .testimonials -->
     </div><!-- / .container -->
-</div><!-- End .sect -->
+</section><!-- End .sect -->
 
 //= template/footer.html

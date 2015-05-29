@@ -7,10 +7,21 @@
   padding-top: 80px;
 }
 
-.promo-slide__img img {
-  width: 1000px;
-  display: block;
-  margin: 0 auto;
+.promo-slide__img {
+  overflow: hidden;
+
+  img {
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.promo-slide__title {
+  line-height: 0;
+  margin: 0;
+  text-indent: -9999px;
+  color: transparent;
 }
 
 .promo-slide__info {
@@ -74,4 +85,86 @@
     color: $green;
     background-image: url($imgPath + 'hexagon_green_btn_hover.png');
   }
+}
+
+.promo-slide__share {
+  text-align: center;
+  margin-top: 40px;
+
+  .social-likes {
+    display: inline-block;
+  }
+
+  .social-likes__widget {
+    display: inline-block;
+    width: 52px;
+    height: 60px;
+    margin: 0 26px;
+    box-sizing: border-box;
+    background-image: url($iconPath + 'main_share.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .social-likes__counter {
+    color: $white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    line-height: 1;
+    font-size: .7em;
+    bottom: -20px;
+  }
+
+  .social-likes__widget_facebook {
+    background-position: 0 0;
+
+    &:hover {
+      background-position: 0 -60px;
+    }
+  }
+
+  .social-likes__widget_vkontakte {
+    background-position: 0 -120px;
+
+    &:hover {
+      background-position: 0 -180px;
+    }
+  }
+
+  .social-likes__widget_twitter {
+    background-position: 0 -360px;
+
+    &:hover {
+      background-position: 0 -420px;
+    }
+  }
+
+  .social-likes__widget_odnoklassniki {
+    background-position: 0 -240px;
+
+    &:hover {
+      background-position: 0 -300px;
+    }
+  }
+}
+
+.about {
+  padding: 70px 200px;
+  text-align: center;
+  background-color: $red;
+}
+
+.about-title {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.about-text {
+  font-size: 1.4em;
+  line-height: 1.3;
 }

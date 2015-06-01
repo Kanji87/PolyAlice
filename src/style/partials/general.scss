@@ -7,9 +7,11 @@ $phone: 320px;
 $fablet: 480px;
 $tablet: 768px;
 $desktop: 1024px;
+$large: 1300px;
 
 // Colors
 $black: #333;
+$deep-grey: #3f4039;
 $white: #fff;
 $yellow: #fdc244;
 $orange: #f69322;
@@ -37,7 +39,10 @@ $iconPath: "../img/alice/icons/";
     @media only screen and (min-width: $tablet) and (max-width: $desktop - 1) { @content; }
   }
   @else if $media == desktop {
-    @media only screen and (min-width: $desktop) { @content; }
+    @media only screen and (min-width: $desktop) and (max-width: $large - 1) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $large) { @content; }
   }
 }
 
@@ -47,9 +52,10 @@ html {
 }
 
 body {
-  font-family: PolytechSans, helvetica, sans-serif;
+  font-family: PolytechSans, helvetica, sans-serif !important;
   color: $black;
   letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {

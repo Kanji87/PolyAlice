@@ -3,22 +3,23 @@
 <!-- Slider Begin -->
 <!--<section class="slider-wrapper promo-slide">-->
 <section class="promo-slide">
-    <div class="promo-slide__img">
+    <div class="promo-slide__img container">
         <h1 class="promo-slide__title">Интерактивная выставка Алиса в стране наук</h1>
-        <span class="promo-slide_age">7+</span>
-        <img src="img/alice/main_slide.png" alt="" />
+        <!--<span class="promo-slide_age">7+</span>-->
+        <img class="promo-slide__img-full" src="img/alice/main_slide.png" alt="" />
+        <img class="promo-slide__img-phone" src="img/alice/main_slide_phone.png" alt="" />
         <a href="#" class="promo-slide__hashtag">#встраненаук</a>
     </div>
     <div class="promo-slide__info">
         <div class="promo-slide__location clearfix">
-            <p class="alice-font col-md-6"><i class="polyicon-location-marker"></i> вднх, павильон №64</p>
-            <p class="alice-font col-md-6">05 июня &mdash; 04 октября</p>
+            <p class="alice-font col-xs-12 col-sm-6 col-md-6"><i class="polyicon-location-marker"></i> вднх, павильон №64</p>
+            <p class="alice-font col-xs-12 col-sm-6 col-md-6">05 июня &mdash; 04 октября</p>
         </div>
         <div class="promo-slide__action clearfix">
-            <div class="promo-slide__action-button promo-slide__visit col-md-6">
+            <div class="promo-slide__action-button promo-slide__visit col-sm-6 col-md-6">
                 <a href="#">посетить выставку</a>
             </div>
-            <div class="promo-slide__action-button promo-slide__buy col-md-6">
+            <div class="promo-slide__action-button promo-slide__buy col-sm-6 col-md-6">
                 <a href="#">купить билет</a>
             </div>
         </div>
@@ -118,7 +119,7 @@
     <div class="tile__item"></div>
 </section>
 
-<section class="sect white-text" data-background="img/alice/cat.png">
+<section class="quotes sect white-text">
     <div class="container">
         <div class="testimonials mb-20-sm">
             <ul class="testimonial bxslider">
@@ -141,22 +142,24 @@
 
 <section class="partners">
     <h3 class="alice-font section-title">партнеры</h3>
-    <div class="partners__item"><img src="img/alice/logo_vdnh.png" alt="" /></div>
+    <div class="partners__item">
+        <a href="http://vdnh.ru/" target="_blank"><img src="img/alice/logo_vdnh.png" alt="" /></a>
+    </div>
 </section>
 
 <section class="forms">
     <div class="container">
-        <div class="form__col">
+        <div class="form__col col-md-6">
+            <form action="" class="form__subscribe">
+                <input class="form__subscribe-email" type="email" name="" id="" placeholder="Ваш Email"/>
+                <button class="form__button form__subscribe-submit" type="submit">подписаться</button>
+            </form>
+        </div>
+        <div class="form__col col-md-6">
             <form action="" class="form__comment">
                 <input class="form__comment-name" type="text" name="" id="" placeholder="Имя"/>
                 <textarea class="form__comment-text" name="" id="" placeholder="Сообщение"></textarea>
                 <button class="form__button form__comment-submit" type="submit">отправить комментарий</button>
-            </form>
-        </div>
-        <div class="form__col">
-            <form action="" class="form__subscribe">
-                <input class="form__subscribe-email" type="text" name="" id="" placeholder="Ваш Email"/>
-                <button class="form__button form__subscribe-submit" type="submit">подписаться</button>
             </form>
         </div>
     </div>
@@ -164,11 +167,18 @@
 
 <script>
     $(function(){
-        $('.bxslider').bxSlider({
+        $('.slider .bxslider').bxSlider({
             mode: 'fade',
             captions: true,
             pager: true,
             pagerType: 'short'
+        });
+
+        $('.testimonial.bxslider').bxSlider({
+            mode: 'fade',
+            captions: false,
+            pager: false,
+            controls: false
         });
     });
 </script>

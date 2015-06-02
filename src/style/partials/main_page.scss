@@ -6,17 +6,35 @@
   background-color: $black;
   padding-top: 80px;
   padding-bottom: 40px;
+
+  @include respond-to(tablet) {
+    padding-top: 60px;
+  }
 }
 
 .promo-slide__img {
   overflow: hidden;
-  width: 1000px;
   margin: 0 auto;
   position: relative;
 
   img {
-    display: block;
     width: 100%;
+  }
+}
+
+.promo-slide__img-full {
+  display: block;
+
+  @include respond-to(phone) {
+    display: none;
+  }
+}
+
+.promo-slide__img-phone {
+  display: none;
+
+  @include respond-to(phone) {
+    display: block;
   }
 }
 
@@ -84,11 +102,33 @@
     border-color: transparent transparent transparent $black;
 
   }
+
+  @include respond-to(phone) {
+    right: 30px;
+    bottom: 5px;
+    height: 20px;
+    line-height: 20px;
+    font-size: .8em;
+
+    &:before {
+      left: -6px;
+      border-width: 10px 6px 10px 0;
+    }
+
+    &:after {
+      right: -6px;
+      border-width: 10px 0 10px 6px;
+    }
+  }
 }
 
 .promo-slide__info {
   width: 700px;
   margin: 0 auto;
+
+  @include respond-to(fablet) {
+    width: 100%;
+  }
 }
 
 .promo-slide__location {
@@ -106,6 +146,12 @@
     text-align: center;
     line-height: 1;
     margin: 0;
+  }
+
+  @include respond-to(fablet) {
+    p {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -130,6 +176,18 @@
     -ms-transition: all ease-in-out .3s;
     -o-transition: all ease-in-out .3s;
     transition: all ease-in-out .3s;
+  }
+
+  @include respond-to(fablet) {
+    a {
+      width: 250px;
+      margin-bottom: 15px;
+      -webkit-background-size: contain;
+      background-size: contain;
+      padding: 0;
+      height: 40px;
+      line-height: 40px;
+    }
   }
 }
 
@@ -169,6 +227,15 @@
     background-size: cover;
     cursor: pointer;
     position: relative;
+
+    @include respond-to(tablet) {
+      width: 45px;
+      height: 52px;
+    }
+
+    @include respond-to(phone) {
+      margin: 0 10px;
+    }
   }
 
   .social-likes__counter {
@@ -188,6 +255,14 @@
     &:hover {
       background-position: 0 -60px;
     }
+
+    @include respond-to(tablet) {
+      background-position: 0 0;
+
+      &:hover {
+        background-position: 0 -52px;
+      }
+    }
   }
 
   .social-likes__widget_vkontakte {
@@ -195,6 +270,14 @@
 
     &:hover {
       background-position: 0 -180px;
+    }
+
+    @include respond-to(tablet) {
+      background-position: 0 -104px;
+
+      &:hover {
+        background-position: 0 -156px;
+      }
     }
   }
 
@@ -204,6 +287,14 @@
     &:hover {
       background-position: 0 -420px;
     }
+
+    @include respond-to(tablet) {
+      background-position: 0 -312px;
+
+      &:hover {
+        background-position: 0 -364px;
+      }
+    }
   }
 
   .social-likes__widget_odnoklassniki {
@@ -211,6 +302,14 @@
 
     &:hover {
       background-position: 0 -300px;
+    }
+
+    @include respond-to(tablet) {
+      background-position: 0 -208px;
+
+      &:hover {
+        background-position: 0 -260px;
+      }
     }
   }
 }
@@ -242,7 +341,7 @@
   box-sizing: content-box;
 
   .bx-wrapper {
-    width: 1000px !important;
+    width: 970px !important;
     height: 540px !important;
     margin: 0 auto;
     
@@ -318,6 +417,49 @@
     letter-spacing: -2px;
     width: initial;
   }
+
+  @include respond-to(tablet) {
+    height: 450px;
+
+    .bx-wrapper,
+    .bx-viewport,
+    li {
+      height: 450px !important;
+    }
+
+    .pattern {
+      display: none;
+    }
+  }
+
+  @include respond-to(fablet) {
+    height: 350px;
+
+    .bx-wrapper,
+    .bx-viewport,
+    li {
+      height: 350px !important;
+    }
+  }
+
+  @include respond-to(phone) {
+    height: 250px;
+
+    .bx-wrapper,
+    .bx-viewport,
+    li {
+      height: 250px !important;
+    }
+
+    .bx-caption,
+    .bx-pager {
+      font-size: 1em;
+    }
+
+    .bx-caption {
+      padding-left: 65px;
+    }
+  }
 }
 
 .tile__item {
@@ -327,6 +469,21 @@
   position: relative;
   background-color: $white;
   overflow: hidden;
+
+  @include respond-to(tablet) {
+    height: 200px;
+  }
+
+  @include respond-to(tablet) {
+    display: block;
+    float: none;
+    width: 100%;
+    height: 330px;
+
+    &:last-child {
+      display: none;
+    }
+  }
 
   figcaption {
     background-color: $white;
@@ -347,6 +504,7 @@
     }
 
     .tile__item-description{
+      padding: 0 10px;
       bottom: 0;
     }
   }
@@ -427,6 +585,7 @@
     color: $yellow;
     margin-top: 35px;
     font-size: 1.3125em;
+    margin-bottom: 0;
     text-transform: uppercase;
     font-family: "PolytechSans", helvetica, sans-serif;
   }
@@ -506,14 +665,32 @@
       box-shadow: none;
     }
   }
+
+  @include respond-to(tablet) {
+    padding-bottom: 50px;
+  }
+
+  @include respond-to(phone) {
+    padding-bottom: 0;
+  }
 }
 
 .form__col {
-  display: inline-block;
-  width: 49%;
+  float: right;
   box-sizing: border-box;
   padding: 0 20px;
   vertical-align: top;
+
+  @include respond-to(tablet) {
+    display: block;
+    width: 100%;
+    padding: 0 200px;
+    margin-bottom: 50px;
+  }
+
+  @include respond-to(fablet) {
+    padding: 0 20px;
+  }
 }
 
 .form__button {
@@ -542,55 +719,30 @@
     color: $yellow;
     background-image: url($imgPath + 'hexagon_form_button_hover.png');
   }
-}
-
-.footer {
-  background-color: $black;
-  padding: 70px 0;
-  font-size: inherit;
-  text-align: left;
-}
-
-.footer__social-list {
-  list-style: none;
-  text-align: center;
-}
-
-.footer__social-item {
-  display: inline-block;
-  padding: 0 15px;
-}
-
-.footer__social-link {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
+  
+  @include respond-to(tablet) {
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    height: 50px;
   }
 
-  i {
-    font-size: 2em;
+  @include respond-to(phone) {
+    height: 40px;
+    font-size: 1em;
   }
 }
 
-.footer__info {
-  margin-top: 40px;
+.quotes {
+  background-image: url($imgPath + 'cat.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  span,
-  a {
-    display: block;
-    color: $white;
-    text-decoration: none;
-    line-height: 1.4;
-    font-weight: 300;
-    font-size: 1.2em;
-
-    @include respond-to(desktop) {
-      font-size: 1em;
-    }
+  @include respond-to(tablet) {
+    background-image: url($imgPath + 'cat_tablet.png');
   }
 
-  .footer-link {
-    color: $yellow;
+  @include respond-to(phone) {
+    background-image: url($imgPath + 'cat_phone.png');
   }
 }

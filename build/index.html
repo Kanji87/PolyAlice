@@ -14,10 +14,20 @@
 
 <!--<![endif]-->
 <head>
-    <title>Skyline</title>
-    <meta name="description" content="">
+    <title>Алиса в стране наук</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta property="fb:app_id" content="475227962600265">
+    <meta property="og:url" content="http://alice.polymus.ru">
+    <meta property="og:title" content="Алиса в стране наук"/>
+    <meta property="og:description" content="Выставка о Стране науки, еще более невероятной, чем самая «чудестранная» сказка">
+    <meta property="og:image" content="http://alice.polymus.ru/img/alice_lenta.jpg"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Polytechnicum">
+    <meta name="twitter:creator" content="@Polytechnicum">
+    <meta name="twitter:title" content="Алиса в стране наук"/>
+    <meta name="twitter:description" content="Выставка о Стране науки, еще более невероятной, чем самая «чудестранная» сказка"/>
+    <meta name="twitter:image" content="http://alice.polymus.ru/img/alice_lenta.jpg">
     <link href='http://fonts.googleapis.com/css?family=Oranienbaum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
@@ -50,7 +60,7 @@
         <nav>
             <ul class="main_menu">
                 <li><a href="#">Посетить выставку</a></li>
-                <li>
+                <li class="with-submenu">
                     <a href="#">Темы</a>
                     <ul>
                         <li><a href="#">Пространство</a></li>
@@ -60,6 +70,13 @@
                         <li><a href="#">Восприятие</a></li>
                     </ul>
                 </li>
+                <div class="theme-submenu">
+                    <a href="#">Пространство</a>
+                    <a href="#">Жизнь</a>
+                    <a href="#">Математика</a>
+                    <a href="#">Время</a>
+                    <a href="#">Восприятие</a>
+                </div>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">Тест</a></li>
                 <li><a href="#">Игры</a></li>
@@ -74,22 +91,23 @@
 <!-- Slider Begin -->
 <!--<section class="slider-wrapper promo-slide">-->
 <section class="promo-slide">
-    <div class="promo-slide__img">
+    <div class="promo-slide__img container">
         <h1 class="promo-slide__title">Интерактивная выставка Алиса в стране наук</h1>
-        <span class="promo-slide_age">7+</span>
-        <img src="img/alice/main_slide.png" alt="" />
+        <!--<span class="promo-slide_age">7+</span>-->
+        <img class="promo-slide__img-full" src="img/alice/main_slide.png" alt="" />
+        <img class="promo-slide__img-phone" src="img/alice/main_slide_phone.png" alt="" />
         <a href="#" class="promo-slide__hashtag">#встраненаук</a>
     </div>
     <div class="promo-slide__info">
         <div class="promo-slide__location clearfix">
-            <p class="alice-font col-md-6"><i class="polyicon-location-marker"></i> вднх, павильон №64</p>
-            <p class="alice-font col-md-6">05 июня &mdash; 04 октября</p>
+            <p class="alice-font col-xs-12 col-sm-6 col-md-6"><i class="polyicon-location-marker"></i> вднх, павильон №64</p>
+            <p class="alice-font col-xs-12 col-sm-6 col-md-6">05 июня &mdash; 04 октября</p>
         </div>
         <div class="promo-slide__action clearfix">
-            <div class="promo-slide__action-button promo-slide__visit col-md-6">
+            <div class="promo-slide__action-button promo-slide__visit col-sm-6 col-md-6">
                 <a href="#">посетить выставку</a>
             </div>
-            <div class="promo-slide__action-button promo-slide__buy col-md-6">
+            <div class="promo-slide__action-button promo-slide__buy col-sm-6 col-md-6">
                 <a href="#">купить билет</a>
             </div>
         </div>
@@ -189,7 +207,7 @@
     <div class="tile__item"></div>
 </section>
 
-<section class="sect white-text" data-background="img/alice/cat.png">
+<section class="quotes sect white-text">
     <div class="container">
         <div class="testimonials mb-20-sm">
             <ul class="testimonial bxslider">
@@ -212,22 +230,24 @@
 
 <section class="partners">
     <h3 class="alice-font section-title">партнеры</h3>
-    <div class="partners__item"><img src="img/alice/logo_vdnh.png" alt="" /></div>
+    <div class="partners__item">
+        <a href="http://vdnh.ru/" target="_blank"><img src="img/alice/logo_vdnh.png" alt="" /></a>
+    </div>
 </section>
 
 <section class="forms">
     <div class="container">
-        <div class="form__col">
+        <div class="form__col col-md-6">
+            <form action="" class="form__subscribe">
+                <input class="form__subscribe-email" type="email" name="" id="" placeholder="Ваш Email"/>
+                <button class="form__button form__subscribe-submit" type="submit">подписаться</button>
+            </form>
+        </div>
+        <div class="form__col col-md-6">
             <form action="" class="form__comment">
                 <input class="form__comment-name" type="text" name="" id="" placeholder="Имя"/>
                 <textarea class="form__comment-text" name="" id="" placeholder="Сообщение"></textarea>
                 <button class="form__button form__comment-submit" type="submit">отправить комментарий</button>
-            </form>
-        </div>
-        <div class="form__col">
-            <form action="" class="form__subscribe">
-                <input class="form__subscribe-email" type="text" name="" id="" placeholder="Ваш Email"/>
-                <button class="form__button form__subscribe-submit" type="submit">подписаться</button>
             </form>
         </div>
     </div>
@@ -235,11 +255,18 @@
 
 <script>
     $(function(){
-        $('.bxslider').bxSlider({
+        $('.slider .bxslider').bxSlider({
             mode: 'fade',
             captions: true,
             pager: true,
             pagerType: 'short'
+        });
+
+        $('.testimonial.bxslider').bxSlider({
+            mode: 'fade',
+            captions: false,
+            pager: false,
+            controls: false
         });
     });
 </script>
@@ -276,17 +303,17 @@
             </ul>
         </div>
         <div class="footer__info clearfix">
-            <div class="col-md-3">
+            <div class="footer__info-col col-xs-12 col-md-3">
                 <span>+7 916 008−12−08</span>
                 <a href="mailto:info@polymus.ru">info@polymus.ru</a>
             </div>
-            <div class="col-md-4">
+            <div class="footer__info-col col-xs-12 col-md-4">
                 <span>Наталья Аредова</span>
                 <span>PR-менеджер</span>
                 <span>+7 916 008−12−72</span>
                 <a href="mailto:nvaredona@polymus.ru">nvaredova@polymus.ru</a>
             </div>
-            <div class="col-md-5">
+            <div class="footer__info-col col-xs-12 col-md-5">
                 <a class="footer-link" target="_blank" href="https://polymus.ru/ru/copyrights/">Использование материалов сайта</a>
                 <a class="footer-link" target="_blank" href="https://polymus.ru/ru/agreement/">Соглашение с пользователем</a>
                 <span>&nbsp;</span>

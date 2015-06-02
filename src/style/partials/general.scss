@@ -6,7 +6,7 @@ general.scss
 $phone: 320px;
 $fablet: 480px;
 $tablet: 768px;
-$desktop: 1024px;
+$desktop: 992px;
 $large: 1300px;
 
 // Colors
@@ -30,16 +30,16 @@ $iconPath: "../img/alice/icons/";
 /* Mixins */
 @mixin respond-to($media) {
   @if $media == phone {
-    @media only screen and (min-width: $phone) and (max-width: $fablet - 1) { @content; }
+    @media only screen and (max-width: $fablet - 1) { @content; }
   }
   @else if $media == fablet {
-    @media only screen and (min-width: $fablet) and (max-width: $tablet - 1) { @content; }
+    @media only screen and (max-width: $tablet - 1) { @content; }
   }
   @else if $media == tablet {
-    @media only screen and (min-width: $tablet) and (max-width: $desktop - 1) { @content; }
+    @media only screen and (max-width: $desktop - 1) { @content; }
   }
   @else if $media == desktop {
-    @media only screen and (min-width: $desktop) and (max-width: $large - 1) { @content; }
+    @media only screen and (max-width: $large - 1) { @content; }
   }
   @else if $media == large {
     @media only screen and (min-width: $large) { @content; }
@@ -47,15 +47,21 @@ $iconPath: "../img/alice/icons/";
 }
 
 /* Styles */
-html {
-  font-size: 16px;
-}
 
 body {
   font-family: PolytechSans, helvetica, sans-serif !important;
   color: $black;
+  font-size: 16px;
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
+
+  @include respond-to(tablet) {
+    font-size: 15px;
+  }
+
+  @include respond-to(fablet) {
+    font-size: 15px;
+  }
 }
 
 h1 {
@@ -80,7 +86,18 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  width: 1000px;
+  width: 970px;
+  padding: 0;
+
+  @include respond-to(tablet) {
+    width: 100%;
+    padding: 0 20px !important;
+  }
+
+  @include respond-to(fablet) {
+    width: 100%;
+    padding: 0 20px !important;
+  }
 }
 
 .alice-font {

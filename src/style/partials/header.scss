@@ -54,9 +54,13 @@ header.scss
     text-transform: none;
   }
 
-  .logo img {
-    display: initial;
-    width: 150px;
+  .logo {
+    background-image: none;
+
+    img {
+      display: initial;
+      width: 150px;
+    }
   }
 
   .container {
@@ -74,7 +78,7 @@ header.scss
     height: 60px;
 
     &.opened {
-      height: initial;
+      height: 60px;
     }
 
     .logo {
@@ -158,8 +162,22 @@ header.scss
   }
 }
 
+@include respond-to(tablet) {
+  .with-submenu > ul {
+    display: none;
+  }
+}
+
 @include respond-to(fablet) {
   .header .theme-submenu a {
     padding: 8px 20px;
+  }
+}
+
+.header .main_menu.inner-menu > li {
+  color: $yellow;
+
+  &.current {
+    color: $white;
   }
 }

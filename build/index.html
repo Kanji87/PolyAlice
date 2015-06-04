@@ -29,8 +29,8 @@
     <meta name="twitter:description" content="Выставка о Стране науки, еще более невероятной, чем самая «чудестранная» сказка"/>
     <meta name="twitter:image" content="http://alice.polymus.ru/img/alice_lenta.jpg">
     <link href='http://fonts.googleapis.com/css?family=Oranienbaum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/main.js"></script>
 </head>
 <body>
 
@@ -50,7 +50,7 @@
     <div class="container">
         <!-- Logo -->
         <a href="https://polymus.ru" target="_blank" class="logo">
-            <img class="logo-polymus" src="img/alice/logo_polymus.png" alt="Polymus">
+            <img class="logo-polymus" src="/img/alice/logo_polymus.png" alt="Polymus">
         </a>
         <!-- End .logo -->
         <a href="#" class="open-btn">
@@ -59,7 +59,7 @@
         <!-- Navigation -->
         <nav>
             <ul class="main_menu">
-                <li><a href="#">Посетить выставку</a></li>
+                <li class="invis"><a href="#">Посетить выставку</a></li>
                 <li class="with-submenu">
                     <a href="#">Темы</a>
                     <ul>
@@ -77,10 +77,10 @@
                     <a href="#">Время</a>
                     <a href="#">Восприятие</a>
                 </div>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Тест</a></li>
-                <li><a href="#">Игры</a></li>
-                <li><a href="#">Конкурс</a></li>
+                <li class="invis"><a href="#">Новости</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li class="invis"><a href="#">Игры</a></li>
+                <li class="invis"><a href="#">Конкурс</a></li>
             </ul>
         </nav>
         <!-- End Navigation -->
@@ -94,8 +94,8 @@
     <div class="promo-slide__img container">
         <h1 class="promo-slide__title">Интерактивная выставка Алиса в стране наук</h1>
         <!--<span class="promo-slide_age">7+</span>-->
-        <img class="promo-slide__img-full" src="img/alice/main_slide.png" alt="" />
-        <img class="promo-slide__img-phone" src="img/alice/main_slide_phone.png" alt="" />
+        <img class="promo-slide__img-full" src="/img/alice/main_slide.png" alt="" />
+        <img class="promo-slide__img-phone" src="/img/alice/main_slide_phone.png" alt="" />
         <a href="#" class="promo-slide__hashtag">#встраненаук</a>
     </div>
     <div class="promo-slide__info">
@@ -151,7 +151,7 @@
     <div class="tile__item">
         <a class="tile__item-link" href=""></a>
         <figure class="tile__item-img">
-            <img src="img/alice/gallery_1.png" alt="" />
+            <img src="/img/alice/gallery_1.png" alt="" />
             <figcaption class="alice-font">пространство</figcaption>
         </figure>
         <div class="tile__item-description">
@@ -162,7 +162,7 @@
     <div class="tile__item">
         <a class="tile__item-link" href=""></a>
         <figure class="tile__item-img">
-            <img src="img/alice/gallery_2.png" alt="" />
+            <img src="/img/alice/gallery_2.png" alt="" />
             <figcaption class="alice-font">жизнь</figcaption>
         </figure>
         <div class="tile__item-description">
@@ -173,7 +173,7 @@
     <div class="tile__item">
         <a class="tile__item-link" href=""></a>
         <figure class="tile__item-img">
-            <img src="img/alice/gallery_3.png" alt="" />
+            <img src="/img/alice/gallery_3.png" alt="" />
             <figcaption class="alice-font">математика</figcaption>
         </figure>
         <div class="tile__item-description">
@@ -185,7 +185,7 @@
     <div class="tile__item">
         <a class="tile__item-link" href=""></a>
         <figure class="tile__item-img">
-            <img src="img/alice/gallery_4.png" alt="" />
+            <img src="/img/alice/gallery_4.png" alt="" />
             <figcaption class="alice-font">время</figcaption>
         </figure>
         <div class="tile__item-description">
@@ -196,7 +196,7 @@
     <div class="tile__item">
         <a class="tile__item-link" href=""></a>
         <figure class="tile__item-img">
-            <img src="img/alice/gallery_5.png" alt="" />
+            <img src="/img/alice/gallery_5.png" alt="" />
             <figcaption class="alice-font">восприятие</figcaption>
         </figure>
         <div class="tile__item-description">
@@ -230,8 +230,15 @@
 
 <section class="partners">
     <h3 class="alice-font section-title">партнеры</h3>
-    <div class="partners__item">
-        <a href="http://vdnh.ru/" target="_blank"><img src="img/alice/logo_vdnh.png" alt="" /></a>
+    <div class="partners-list clearfix">
+        <div class="partners__item col-md-5">
+            <span class="partner-name">Cоорганизатор выставки</span>
+            <a href="http://vdnh.ru/" class="partner-link" target="_blank"><img src="/img/alice/logo_vdnh.png" alt="" /></a>
+        </div>
+        <div class="partners__item col-md-7">
+            <span class="partner-name">Главный партнер музея</span>
+            <a href="http://www.openbank.ru/" class="partner-link" target="_blank"><img src="/img/alice/openbank_logo.png" alt="" /></a>
+        </div>
     </div>
 </section>
 
@@ -239,7 +246,7 @@
     <div class="container">
         <div class="form__col col-md-6">
             <form action="" class="form__subscribe">
-                <input class="form__subscribe-email" type="email" name="" id="" placeholder="Ваш Email"/>
+                <input class="form__subscribe-email" type="email" name="" id="" placeholder="Ваш E-mail"/>
                 <button class="form__button form__subscribe-submit" type="submit">подписаться</button>
             </form>
         </div>
@@ -303,17 +310,21 @@
             </ul>
         </div>
         <div class="footer__info clearfix">
-            <div class="footer__info-col col-xs-12 col-md-3">
+            <div class="footer__info-col col-xs-12">
+                <span>Контакты для посетителей:</span>
+                <span>&nbsp;</span>
                 <span>+7 916 008−12−08</span>
                 <a href="mailto:info@polymus.ru">info@polymus.ru</a>
             </div>
-            <div class="footer__info-col col-xs-12 col-md-4">
+            <div class="footer__info-col col-xs-12">
+                <span>Контакты для СМИ:</span>
+                <span>&nbsp;</span>
                 <span>Наталья Аредова</span>
                 <span>PR-менеджер</span>
                 <span>+7 916 008−12−72</span>
                 <a href="mailto:nvaredona@polymus.ru">nvaredova@polymus.ru</a>
             </div>
-            <div class="footer__info-col col-xs-12 col-md-5">
+            <div class="footer__info-col col-xs-12">
                 <a class="footer-link" target="_blank" href="https://polymus.ru/ru/copyrights/">Использование материалов сайта</a>
                 <a class="footer-link" target="_blank" href="https://polymus.ru/ru/agreement/">Соглашение с пользователем</a>
                 <span>&nbsp;</span>

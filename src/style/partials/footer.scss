@@ -6,9 +6,21 @@
   font-size: inherit;
   text-align: left;
 
+  .container {
+    width: 970px;
+  }
+
+  @include respond-to(large) {
+    .container {
+      width: 1000px;
+      padding: 0 !important;
+    }
+  }
+
   @include respond-to(tablet) {
     .container {
       width: 500px;
+      padding: 0 !important;
     }
   }
 
@@ -20,7 +32,7 @@
 
   @include respond-to(phone) {
     .container {
-      width: 320px;
+      width: 300px;
     }
   }
 }
@@ -74,7 +86,31 @@
 }
 
 .footer__info-col {
+
+  &:nth-child(1) {
+    width: 275px;
+    margin-right: 30px;
+
+    @include respond-to(large) {
+      width: 290px;
+    }
+  }
+
+  &:nth-child(2) {
+    width: 230px;
+    margin-right: 30px;
+  }
+
+  &:nth-child(3) {
+    width: 375px;
+
+    @include respond-to(large) {
+      width: 390px;
+    }
+  }
+
   @include respond-to(tablet) {
+    width: 100% !important;
     margin-bottom: 20px;
   }
   @include respond-to(fablet) {

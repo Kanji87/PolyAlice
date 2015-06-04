@@ -41,11 +41,6 @@ var path = {
     clean: './build'
 };
 
-var server = {
-    host: 'localhost',
-    port: '9000'
-};
-
 gulp.task('html:build', function(){
     gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(rigger()) //Прогоним через rigger
@@ -99,8 +94,8 @@ gulp.task('fonts:build', function() {
 
 gulp.task('webserver', function() {
     connect.server({
-        host: server.host,
-        port: server.port,
+        root: 'build',
+        port: '9000',
         livereload: true
     });
 });
@@ -156,8 +151,8 @@ gulp.task('server-watch', function(){
         gulp.start('fonts:build');
     });
     connect.server({
-        host: server.host,
-        port: server.port,
+        root: 'build',
+        port: '9000',
         livereload: true
     });
 });

@@ -12,4 +12,4 @@
 
 //= partials/assets.js
 //= partials/plugins.js
-//= partials/app.js
+/* //= partials/app.js */

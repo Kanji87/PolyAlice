@@ -14,7 +14,7 @@
         <nav>
             <ul class="main_menu inner-menu">
                 <li><a href="/">На главную</a></li>
-                <li class="invis"><a href="#">Посетить выставку</a></li>
+                <li><a href="/exhibition.html">Посетить выставку</a></li>
                 <li class="with-submenu">
                     <a href="#">Темы</a>
                     <ul>
@@ -33,7 +33,7 @@
                     <a href="#">Восприятие</a>
                 </div>
                 <li class="invis"><a href="#">Новости</a></li>
-                <li class="current"><a href="test.html">Тест</a></li>
+                <li class="current"><a href="/test.html">Тест</a></li>
                 <li class="invis"><a href="#">Игры</a></li>
                 <li class="invis"><a href="#">Конкурс</a></li>
             </ul>
@@ -43,39 +43,10 @@
 </header>
 <!-- End header -->
 
-<section class="content-wrapper red-bg">
+<section class="content-wrapper">
     <article class="content">
-        <div id="slickQuiz">
-            <h1 class="alice-font article-title">Тест</h1>
-            <h3 class="quizName"><!-- where the quiz name goes --></h3>
-
-            <div class="quizArea">
-                <div class="quiz-img">
-                    <img src="/img/alice/test/alice_test_main.png" alt="" />
-                </div>
-                <div class="quizHeader">
-                    <!-- where the quiz main copy goes -->
-
-                    <div class="button-wrapper">
-                        <a class="button startQuiz" href="#">начать тест</a>
-                    </div>
-                </div>
-
-                <!-- where the quiz gets built -->
-            </div>
-        </div>
+        123
     </article>
 </section>
-
-<script src="js/slickQuiz-config.js"></script>
-<script src="js/slickQuiz.js"></script>
-<script>
-    $(function(){
-        $('#slickQuiz').slickQuiz();
-        $('.startQuiz').click(function(){
-            $('.quizName, .quizHeader, .quiz-img, .article-title').fadeOut('fast');
-        });
-    });
-</script>
 
 //= template/footer.html

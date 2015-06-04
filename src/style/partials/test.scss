@@ -30,6 +30,22 @@ ul.responses li {
 }
 
 /* Main test page */
+
+.test-content {
+  width: 950px;
+  margin: 0 auto;
+  padding: 90px 40px;
+
+  @include respond-to(tablet) {
+    width: 100%;
+  }
+
+  @include respond-to(fablet) {
+    padding: 60px 10px;
+  }
+}
+
+
 .quizName span:first-child {
   border: 0;
   clip: rect(0 0 0 0);
@@ -352,4 +368,15 @@ ol.questions {
 
 .test-retry {
   text-align: center;
+}
+
+.test-result-img {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.test-result-wrapper {
+  padding-bottom: 60px;
+  padding-top: 90px;
 }

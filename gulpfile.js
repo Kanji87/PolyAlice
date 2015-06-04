@@ -113,7 +113,7 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('openbrowser', function() {
-    opn( 'http://' + server.host + ':' + server.port + '/build' );
+    opn( 'http://' + 'localhost' + ':' + '9000' );
 });
 
 gulp.task('watch', function(){

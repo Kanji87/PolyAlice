@@ -54,6 +54,7 @@ body {
   font-size: 16px;
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
 
   @include respond-to(tablet) {
     font-size: 15px;
@@ -121,8 +122,16 @@ h1, h2, h3, h4, p {
   background-color: $red;
 }
 
+.black-bg {
+  background-color: $black;
+}
+
 .yellow-bg {
   background-color: $yellow;
+}
+
+.green-bg {
+  background-color: $green;
 }
 
 .article-title {
@@ -169,7 +178,7 @@ h1, h2, h3, h4, p {
   }
 }
 
-.content-share {
+.black-share {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 60px;
@@ -281,3 +290,172 @@ h1, h2, h3, h4, p {
     }
   }
 }
+
+
+.white-share {
+  text-align: center;
+
+  .social-likes {
+    display: inline-block;
+  }
+
+  .social-likes__widget {
+    display: inline-block;
+    width: 52px;
+    height: 60px;
+    margin: 0 26px;
+    box-sizing: border-box;
+    background-image: url($iconPath + 'main_share.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+
+    @include respond-to(tablet) {
+      width: 45px;
+      height: 52px;
+    }
+
+    @include respond-to(phone) {
+      margin: 0 10px;
+    }
+  }
+
+  .social-likes__counter {
+    color: $white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    line-height: 1;
+    font-size: .7em;
+    bottom: -20px;
+  }
+
+  .social-likes__widget_facebook {
+    background-position: 0 0;
+
+    &:hover {
+      background-position: 0 -60px;
+    }
+
+    @include respond-to(tablet) {
+      background-position: 0 0;
+
+      &:hover {
+        background-position: 0 -52px;
+      }
+    }
+  }
+
+  .social-likes__widget_vkontakte {
+    background-position: 0 -120px;
+
+    &:hover {
+      background-position: 0 -180px;
+    }
+
+    @include respond-to(tablet) {
+      background-position: 0 -104px;
+
+      &:hover {
+        background-position: 0 -156px;
+      }
+    }
+  }
+
+  .social-likes__widget_twitter {
+    background-position: 0 -360px;
+
+    &:hover {
+      background-position: 0 -420px;
+    }
+
+    @include respond-to(tablet) {
+      background-position: 0 -312px;
+
+      &:hover {
+        background-position: 0 -364px;
+      }
+    }
+  }
+
+  .social-likes__widget_odnoklassniki {
+    background-position: 0 -240px;
+
+    &:hover {
+      background-position: 0 -300px;
+    }
+
+    @include respond-to(tablet) {
+      background-position: 0 -208px;
+
+      &:hover {
+        background-position: 0 -260px;
+      }
+    }
+  }
+}
+
+.hashtag {
+  display: block;
+  background-color: $black;
+  color: $white;
+  font-size: 1em;
+  position: absolute;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 5px;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    content: '';
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 10px 16px 0;
+    border-color: transparent $black transparent transparent;
+  }
+
+  &:after {
+    content: '';
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 0 16px 10px;
+    border-color: transparent transparent transparent $black;
+  }
+
+  @include respond-to(phone) {
+    right: 30px;
+    bottom: 5px;
+    height: 20px;
+    line-height: 20px;
+    font-size: .8em;
+
+    &:before {
+      left: -6px;
+      border-width: 10px 6px 10px 0;
+    }
+
+    &:after {
+      right: -6px;
+      border-width: 10px 0 10px 6px;
+    }
+  }
+}
+

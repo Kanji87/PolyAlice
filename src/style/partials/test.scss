@@ -130,6 +130,7 @@ ol.questions li {
 ul.answers {
   width: 450px;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 0;
   overflow: hidden;
 
@@ -333,6 +334,10 @@ ol.questions {
 
 #question4 {
   background-image: url($imgPath + 'test/cheshir.png');
+}
+
+.quizArea .button-wrapper {
+  margin-top: 20px;
 }
 
 

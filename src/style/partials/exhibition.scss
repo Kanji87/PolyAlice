@@ -16,7 +16,7 @@ h1.exhibition-title {
 }
 
 .exhibition-info {
-  padding: 60px 200px;
+  padding: 60px 0;
 }
 
 .exhibition-info {
@@ -24,7 +24,6 @@ h1.exhibition-title {
   color: $white;
 
   @include respond-to(fablet) {
-    padding: 60px 100px;
     text-align: center;
 
     .exhibition-date-place,
@@ -32,11 +31,18 @@ h1.exhibition-title {
     .exhibition-price {
       display: inline-block;
       text-align: left;
+      padding: 0 50px;
     }
   }
 
   @include respond-to(phone) {
-    padding: 30px 20px;
+    padding: 30px 0;
+
+    .exhibition-date-place,
+    .exhibition-schedule,
+    .exhibition-price {
+      padding: 0;
+    }
   }
 
   .polyicon-location-marker {
@@ -130,14 +136,14 @@ h1.exhibition-title {
 }
 
 .map {
-  padding: 70px 200px;
+  padding: 70px 0;
   background-color: $yellow;
   background-image: url($imgPath + 'exhibition/map_preview_pattern.png');
   background-repeat: repeat;
   text-align: center;
 
   @include respond-to(tablet) {
-    padding: 50px;
+    padding: 50px 0;
   }
 
   @include respond-to(phone) {

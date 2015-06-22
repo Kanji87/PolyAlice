@@ -5,10 +5,6 @@ header.scss
 .header {
   background-color: $black;
 
-  .container {
-    padding: 0 40px;
-  }
-
   &.hd-short,
   &.solid {
     background-color: $black;
@@ -61,10 +57,6 @@ header.scss
       display: initial;
       width: 150px;
     }
-  }
-
-  .container {
-    padding: 0 40px;
   }
 
   .theme-submenu {
@@ -158,6 +150,14 @@ header.scss
       a {
         padding: 15px 35px 0;
       }
+    }
+  }
+}
+
+.header {
+  @include respond-to(phone) {
+    .theme-submenu {
+      height: 195px;
     }
   }
 }

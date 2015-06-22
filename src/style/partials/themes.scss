@@ -51,23 +51,15 @@ h1.theme-title {
 }
 
 .content-block {
-  padding: 60px 250px 70px;
+  padding: 60px 20px 70px;
   background-repeat: repeat;
 
-  @include respond-to(desktop) {
-    padding: 60px 150px 70px;
-  }
-
-  @include respond-to(tablet) {
-    padding: 60px 100px 70px;
-  }
-
   @include respond-to(fablet) {
-    padding: 40px 70px;
+    padding: 40px 30px;
   }
 
   @include respond-to(phone) {
-    padding: 20px 40px;
+    padding: 20px 10px;
   }
 }
 

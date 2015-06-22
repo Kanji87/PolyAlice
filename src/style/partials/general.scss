@@ -55,6 +55,7 @@ body {
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
   line-height: 1.4;
+  padding-top: 60px;
 
   @include respond-to(tablet) {
     font-size: 15px;
@@ -90,6 +91,10 @@ h1, h2, h3, h4, p {
   padding: 0;
 }
 
+img {
+  width: 100%;
+}
+
 .container {
   width: 970px;
   padding: 0;
@@ -107,11 +112,6 @@ h1, h2, h3, h4, p {
 
 .content-wrapper {
   width: 100%;
-  padding-top: 80px;
-
-  @include respond-to(tablet) {
-    padding-top: 60px;
-  }
 }
 
 .alice-font {

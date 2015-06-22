@@ -464,6 +464,12 @@
 
 .partners__item {
   text-align: center;
+  padding: 0 40px;
+
+  img {
+    max-width: 100%;
+    width: auto;
+  }
 
   &:last-child {
     .partner-name {
@@ -549,8 +555,9 @@
 .form__col {
   float: right;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 40px;
   vertical-align: top;
+  width: 50%;
 
   @include respond-to(tablet) {
     display: block;

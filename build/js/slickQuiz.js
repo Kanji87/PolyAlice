@@ -468,13 +468,13 @@
 
                 if (correctResponse) {
                     questionLI.addClass(correctClass);
-                    if(questionId === 'question4'){
-                        window.location.href = 'question5.html';
-                    }
+                    console.log(questionId);
+                    //if(questionId === 'question4'){
+                    //    window.location.href = 'question5.html';
+                    //}
                 } else {
                     questionLI.addClass(incorrectClass);
-                    console.log(questionId);
-                    window.location.href = questionId + '.html';
+                    //window.location.href = questionId + '.html';
                 }
 
                 // Toggle appropriate response (either for display now and / or on completion)
@@ -603,26 +603,8 @@
 
                 var score = $(_element + ' ' + _correct).length;
                 var reuslt;
-                if(score >= 0 && score <= 4) {
-                    result = "";
-                    $(".social-likes").data("title", result);
-                    if(score == 1) {
-                        score = score + ' пятно';
-                    }
-                    else if(score == 2 || score == 3 || score == 4) {
-                        score = score + ' пятна';
-                    }
-                }
-                else if(score >= 5 && score <= 7) {
-                    result = "";
-                    $(".social-likes").data("title", result);
-                    score = score + ' пятен';
-                }
-                else if(score >= 8 && score <= 10) {
-                    result = "";
-                    $(".social-likes").data("title", result);
-                    score = score + ' пятен';
-                }
+                console.log(score);
+                window.location.href = 'question' + score + '.html';
                 var displayScore = score;
                 if (plugin.config.scoreAsPercentage) {
                     displayScore = (score / questionCount).toFixed(2)*100 + "%";

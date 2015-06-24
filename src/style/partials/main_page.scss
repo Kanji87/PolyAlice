@@ -43,9 +43,9 @@
   top: 20px;
   left: 85px;
   position: absolute;
-  color: #333;
+  color: #333333;
   font-size: 2em;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 100%;
   padding: 0 10px;
 }
@@ -132,7 +132,7 @@
 }
 
 .promo-slide__visit a {
-    background-image: url($imgPath + 'hexagon_yellow_btn.png');
+  background-image: url($imgPath + 'hexagon_yellow_btn.png');
   &:hover {
     color: $yellow;
     background-image: url($imgPath + 'hexagon_yellow_btn_hover.png');
@@ -181,7 +181,7 @@
     width: 970px !important;
     height: 540px !important;
     margin: 0 auto;
-    
+
     .bx-prev,
     .bx-next {
       top: 45%;
@@ -340,7 +340,7 @@
       opacity: 0;
     }
 
-    .tile__item-description{
+    .tile__item-description {
       padding: 0 10px;
       bottom: 0;
     }
@@ -471,16 +471,24 @@
     width: auto;
   }
 
-  &:last-child {
+  &:nth-child(2),
+  &:nth-child(3) {
     .partner-name {
       margin-bottom: 45px;
+    }
+  }
+
+  &:last-child {
+    img {
+      width: 120px;
     }
   }
 
   @include respond-to(tablet) {
     margin-bottom: 35px;
 
-    &:last-child {
+    &:nth-child(2),
+    &:nth-child(3) {
       .partner-name {
         margin-bottom: 30px;
       }
@@ -494,7 +502,7 @@
 
   .form__comment-name,
   .form__comment-text,
-  .form__subscribe-email{
+  .form__subscribe-email {
     display: block;
     width: 100%;
     padding: 15px;
@@ -597,7 +605,7 @@
     color: $yellow;
     background-image: url($imgPath + 'hexagon_form_button_hover.png');
   }
-  
+
   @include respond-to(tablet) {
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;

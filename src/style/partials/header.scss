@@ -21,7 +21,7 @@ header.scss
 
     li {
       padding: 0 12px;
-      
+
       a {
         font-size: inherit;
       }
@@ -29,24 +29,24 @@ header.scss
   }
 
   .main_menu,
-  .main_menu>li {
+  .main_menu > li {
     font-size: 1em;
   }
 
-  .main_menu>li {
+  .main_menu > li {
     padding: 0 15px;
   }
 
   .logo,
-  .main_menu>li>a,
-  .main_menu>li>span,
+  .main_menu > li > a,
+  .main_menu > li > span,
   .menu-fixer {
     height: 80px;
     line-height: 80px;
   }
 
-  .main_menu>li>a,
-  .main_menu>li>span {
+  .main_menu > li > a,
+  .main_menu > li > span {
     text-transform: none;
   }
 
@@ -64,7 +64,7 @@ header.scss
   }
 }
 
-.header{
+.header {
   @include respond-to(tablet) {
 
     height: 60px;
@@ -93,7 +93,7 @@ header.scss
       overflow: hidden;
     }
 
-    .main_menu>li {
+    .main_menu > li {
       padding: 10px 35px;
 
       &:last-child {
@@ -105,8 +105,8 @@ header.scss
       color: $white !important;
     }
 
-    .main_menu>li>a,
-    .main_menu>li>span {
+    .main_menu > li > a,
+    .main_menu > li > span {
       color: $white;
       height: auto;
       line-height: 1;
@@ -126,7 +126,7 @@ header.scss
       height: 215px;
       bottom: 0;
       z-index: 999;
-      
+
       a {
         color: $white;
         padding: 10px 35px;

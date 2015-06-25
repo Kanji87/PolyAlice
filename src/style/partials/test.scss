@@ -357,7 +357,13 @@ ol.questions {
   text-transform: uppercase;
 }
 
-.test-result {
+.test-result-title {
+  display: block;
+  text-align: center;
+}
+
+.test-result,
+.test-result-title {
   font-size: 1.5em;
 }
 

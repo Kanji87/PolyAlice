@@ -131,7 +131,7 @@ ol.questions li {
 ul.answers {
   width: 500px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 0;
   overflow: hidden;
 
@@ -143,7 +143,7 @@ ul.answers {
     box-sizing: border-box;
 
     label {
-      font-size: 1.2em;
+      font-size: 1.3em;
       line-height: 1;
       position: relative;
       font-weight: 100;
@@ -308,7 +308,12 @@ input[type="radio"]:checked + label:before {
 
 .checkAnswer {
   position: relative;
-  top: 40px;
+//  top: 40px;
+  width: 240px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.3em;
+  padding: 0;
 }
 
 ol.questions {
@@ -345,7 +350,7 @@ ol.questions {
 }
 
 .quizArea .button-wrapper {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 /* Result pages */
@@ -396,4 +401,18 @@ ol.questions {
 
 .test-result-wrapper {
   padding: 90px 0;
+}
+
+.startQuiz {
+  padding: 0;
+  display: block !important;
+  margin: 0 auto;
+  width: 240px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.3em;
+}
+
+.quizDescription {
+  font-size: 1.3em;
 }

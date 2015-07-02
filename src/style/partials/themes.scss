@@ -59,7 +59,7 @@ h1.theme-title {
   }
 
   @include respond-to(phone) {
-    padding: 20px 10px;
+    padding: 30px 10px;
   }
 }
 
@@ -74,8 +74,9 @@ h1.theme-title {
 }
 
 .content-block__text {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 20px;
+  text-align: center;
 
   &:first-child {
     margin-top: 0;
@@ -85,6 +86,31 @@ h1.theme-title {
 .theme-space {
   .theme-heading {
     background-image: url($imgPath + 'themes/space_title.jpg');
+    margin-top: -40px;
+
+    @include respond-to(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  .theme-title {
+    padding-top: 170px;
+
+    @include respond-to(desktop) {
+      padding-top: 90px;
+    }
+
+    @include respond-to(tablet) {
+      padding-top: 70px;
+    }
+
+    @include respond-to(fablet) {
+      padding-top: 50px;
+    }
+
+    @include respond-to(phone) {
+      padding-top: 30px;
+    }
   }
 
   .content-block--bg-image {
@@ -226,6 +252,12 @@ h1.theme-title {
     text-align: center;
     color: $white;
     margin-bottom: 40px;
+
+    @include respond-to(phone) {
+      &:last-of-type {
+        margin-bottom: 10px;
+      }
+    }
   }
 
   span {

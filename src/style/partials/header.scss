@@ -3,6 +3,7 @@ header.scss
 ---*/
 
 .header {
+  height: 60px;
   background-color: $black;
 
   &.hd-short,
@@ -41,8 +42,8 @@ header.scss
   .main_menu > li > a,
   .main_menu > li > span,
   .menu-fixer {
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
   }
 
   .main_menu > li > a,
@@ -56,6 +57,11 @@ header.scss
     img {
       display: initial;
       width: 150px;
+
+      @include respond-to(phone) {
+        width: 120px;
+        margin-top: -2px;
+      }
     }
   }
 
@@ -103,6 +109,7 @@ header.scss
 
     .open-btn {
       color: $white !important;
+      padding-right: 0;
     }
 
     .main_menu > li > a,
@@ -179,5 +186,20 @@ header.scss
 
   &.current {
     color: $white;
+  }
+}
+
+.home {
+  display: block;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 20px;
+  color: $yellow;
+  text-decoration: none;
+
+  &:hover {
+    color: $yellow;
+    text-decoration: none;
   }
 }

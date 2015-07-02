@@ -10,7 +10,7 @@ $desktop: 992px;
 $large: 1300px;
 
 // Colors
-$black: #333;
+$black: #323032;
 $deep-grey: #3f4039;
 $white: #fff;
 $yellow: #fdc244;
@@ -68,6 +68,10 @@ body {
   @include respond-to(phone) {
     font-size: 12px;
   }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, .map-title, h1, h2, h3, h4, h5, h6 {
+  color: $black;
 }
 
 h1 {

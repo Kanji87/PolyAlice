@@ -13,6 +13,10 @@ h1.exhibition-title {
     padding-top: 30px;
     padding-bottom: 20px;
   }
+
+  @include respond-to(fablet) {
+    background-image: none;
+  }
 }
 
 .exhibition-info {
@@ -36,11 +40,12 @@ h1.exhibition-title {
   }
 
   @include respond-to(phone) {
-    padding: 30px 0;
+    padding: 30px 0 40px;
 
     .exhibition-date-place,
     .exhibition-schedule,
     .exhibition-price {
+      display: block;
       padding: 0;
     }
   }
@@ -88,6 +93,10 @@ h1.exhibition-title {
 .exhibition-price__col {
   padding-left: 0;
   line-height: 1.2;
+
+  @include respond-to(phone) {
+    padding: 0;
+  }
 }
 
 .exhibition-price__buy {
@@ -95,7 +104,8 @@ h1.exhibition-title {
   width: 200px;
   text-align: center;
   text-decoration: none;
-  margin-top: 60px;
+  font-size: 1.3em;
+  margin-top: 96px;
   background-image: url($imgPath + 'hexagon_green_btn.png');
   background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
@@ -114,6 +124,14 @@ h1.exhibition-title {
     color: $green;
     background-image: url($imgPath + 'hexagon_green_btn_hover.png');
   }
+
+  @include respond-to(tablet) {
+    margin-top: 60px;
+  }
+
+  @include respond-to(phone) {
+    width: 100%;
+  }
 }
 
 .exhibition-price__title {
@@ -128,6 +146,11 @@ h1.exhibition-title {
 
 .exhibition-price__cat {
   font-size: .9em;
+}
+
+.exhibition-price__phone {
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 .exhibition-price__cost {
@@ -153,6 +176,11 @@ h1.exhibition-title {
   .link-button {
     display: inline-block;
     margin-top: 50px;
+
+    @include respond-to(phone) {
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -161,4 +189,8 @@ h1.exhibition-title {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 35px;
+
+  @include respond-to(phone) {
+    margin-bottom: 20px;
+  }
 }

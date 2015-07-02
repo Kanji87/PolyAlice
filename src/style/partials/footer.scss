@@ -38,6 +38,8 @@
 .footer__social-list {
   list-style: none;
   text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .footer__social-item {
@@ -76,10 +78,26 @@
 
   .footer-link {
     color: $yellow;
+
+    &:last-of-type {
+      margin-bottom: 41px;
+
+      @include respond-to(desktop) {
+        margin-bottom: 37px;
+      }
+
+      @include respond-to(tablet) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   @include respond-to(fablet) {
     padding: 0 70px;
+  }
+
+  @include respond-to(phone) {
+    padding: 0 50px;
   }
 }
 
@@ -104,6 +122,14 @@
 
     @include respond-to(large) {
       width: 390px;
+    }
+  }
+
+  span:first-child {
+    margin-bottom: 15px;
+
+    @include respond-to(phone) {
+      margin-bottom: 10px;
     }
   }
 

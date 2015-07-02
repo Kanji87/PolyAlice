@@ -4,11 +4,19 @@
 
 .promo-slide {
   background-color: $black;
-  padding-top: 80px;
+  margin-top: -50px;
   padding-bottom: 40px;
 
   @include respond-to(tablet) {
-    padding-top: 60px;
+    margin-top: -40px;
+  }
+
+  @include respond-to(fablet) {
+    margin-top: -30px;
+  }
+
+  @include respond-to(phone) {
+    margin-top: -55px;
   }
 }
 
@@ -16,6 +24,10 @@
   overflow: hidden;
   margin: 0 auto;
   position: relative;
+
+  @include respond-to(phone) {
+    margin-top: 30px;
+  }
 
   img {
     width: 100%;
@@ -58,8 +70,17 @@
 }
 
 .promo-slide__hashtag {
-  bottom: 15px;
-  right: 60px;
+  bottom: 10px;
+  right: 30px;
+
+  @include respond-to(tablet) {
+    bottom: 8px;
+    right: 40px;
+  }
+
+  @include respond-to(phone) {
+    right: 35px;
+  }
 }
 
 .promo-slide__info {
@@ -75,10 +96,15 @@
   margin-top: 20px;
   margin-bottom: 30px;
 
+  @include respond-to(phone) {
+    margin-bottom: 10px;
+  }
+
   i {
     color: $yellow;
     font-size: .9em;
   }
+
   p {
     text-transform: uppercase;
     color: $yellow;
@@ -86,13 +112,15 @@
     text-align: center;
     line-height: 1;
     margin: 0;
-  }
 
-  @include respond-to(fablet) {
-    p {
+    @include respond-to(fablet) {
       margin-bottom: 10px;
     }
   }
+}
+
+.promo-slide__action {
+  font-size: 1.3em;
 }
 
 .promo-slide__action-button {
@@ -149,6 +177,10 @@
 
 .promo-slide__share {
   margin-top: 40px;
+
+  @include respond-to(phone) {
+    margin-top: 20px;
+  }
 }
 
 .about {
@@ -253,6 +285,7 @@
     left: 20px;
     letter-spacing: -2px;
     width: initial;
+    z-index: 50;
   }
 
   @include respond-to(tablet) {
@@ -308,10 +341,6 @@
   overflow: hidden;
 
   @include respond-to(tablet) {
-    height: 200px;
-  }
-
-  @include respond-to(tablet) {
     display: block;
     float: none;
     width: 100%;
@@ -320,6 +349,10 @@
     &:last-child {
       display: none;
     }
+  }
+
+  @include respond-to(phone) {
+    height: 305px;
   }
 
   figcaption {
@@ -442,6 +475,10 @@
 .partners {
   padding: 70px 0;
   background-color: $yellow;
+
+  @include respond-to(phone) {
+    padding-bottom: 40px;
+  }
 }
 
 .partners-list {
@@ -563,19 +600,34 @@
 .form__col {
   float: right;
   box-sizing: border-box;
-  padding: 0 40px;
+  padding: 0;
   vertical-align: top;
   width: 50%;
+
+  &:first-child {
+    padding-left: 30px;
+  }
+
+  &:last-child {
+    padding-right: 30px;
+  }
 
   @include respond-to(tablet) {
     display: block;
     width: 100%;
-    padding: 0 200px;
     margin-bottom: 50px;
+
+    &:first-child,
+    &:last-child  {
+      padding: 0 150px;
+    }
   }
 
   @include respond-to(fablet) {
-    padding: 0 20px;
+    &:first-child,
+    &:last-child  {
+      padding: 0 30px;
+    }
   }
 }
 
@@ -585,14 +637,15 @@
   width: 100%;
   padding: 0;
   margin-top: 40px;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  line-height: 60px;
   color: $black;
   background-color: transparent;
   border: 0;
   outline: none;
   background-image: url($imgPath + 'hexagon_form_button.png');
-  -webkit-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   -webkit-transition: all ease-in-out .3s;
   -moz-transition: all ease-in-out .3s;
@@ -607,14 +660,16 @@
   }
 
   @include respond-to(tablet) {
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
     height: 50px;
+    line-height: 50px;
+    font-size: 1.5em;
   }
 
   @include respond-to(phone) {
-    height: 40px;
-    font-size: 1em;
+    height: 35px;
+    margin-top: 20px;
+    line-height: 35px;
+    font-size: 1.2em;
   }
 }
 
@@ -631,4 +686,11 @@
   @include respond-to(phone) {
     background-image: url($imgPath + 'cat_phone.png');
   }
+}
+
+.bx-controls {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }

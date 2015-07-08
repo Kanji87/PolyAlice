@@ -74,6 +74,10 @@ h1.exhibition-title {
 
   &:last-child {
     font-size: .9em;
+
+    @include respond-to(fablet) {
+      margin-top: 10px;
+    }
   }
 }
 

@@ -144,16 +144,18 @@
     -ms-transition: all ease-in-out .3s;
     -o-transition: all ease-in-out .3s;
     transition: all ease-in-out .3s;
-  }
 
-  @include respond-to(fablet) {
-    a {
+    @include respond-to(fablet) {
       width: 250px;
       margin-bottom: 15px;
       -webkit-background-size: contain;
       background-size: contain;
       padding: 0;
       height: 40px;
+      line-height: 38px;
+    }
+
+    @include respond-to(phone) {
       line-height: 40px;
     }
   }
@@ -286,6 +288,14 @@
     letter-spacing: -2px;
     width: initial;
     z-index: 50;
+
+    @include respond-to(fablet) {
+      bottom: 7px;
+    }
+
+    @include respond-to(fablet) {
+      bottom: 8px;
+    }
   }
 
   @include respond-to(tablet) {
@@ -352,7 +362,7 @@
   }
 
   @include respond-to(phone) {
-    height: 305px;
+    height: 250px;
   }
 
   figcaption {
@@ -693,4 +703,15 @@
   height: 100%;
   position: absolute;
   top: 0;
+}
+
+.contest {
+  @extend .about;
+  background-color: $red;
+  padding-bottom: 0;
+
+  a {
+    color: $orange;
+    text-decoration: none;
+  }
 }
